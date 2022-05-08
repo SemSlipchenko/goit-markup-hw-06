@@ -381,28 +381,44 @@
                 </svg>
             </button>
             <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-            <form>
+            <form class="modal-form">
                 <fieldset class="modal-field">
                     <label class="modal-label" for="name">Имя</label>
-                    <input class="modal-input" type="text" id="name">
+                    <div class="input-wrap">
+                        <input class="modal-input" type="text" id="name">
+                        <svg class="icon-input">
+                            <use href="./images/icons.svg#icon-person"></use>
+                        </svg>
+                    </div>
                 </fieldset>
                 <fieldset class="modal-field">
                     <label class="modal-label" for="tel">Телефон</label>
-                    <input class="modal-input" type="number" id="tel">
+                    <div class="input-wrap">
+                        <input class="modal-input" type="tel" id="tel"
+                            pattern="[0-9]{5,10}">
+                        <svg class="icon-input">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
                 </fieldset>
                 <fieldset class="modal-field">
                     <label class="modal-label" for="modal-email">Почта</label>
-                    <input class="modal-input" type="email" id="modal-email">
+                    <div class="input-wrap">
+                        <input class="modal-input" type="email" id="modal-email">
+                        <svg class="icon-input">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
                 </fieldset>
                 <fieldset class="modal-field">
                     <label class="modal-label" for="comment">Комментарий</label>
-                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
                 </fieldset>
                 <fieldset class="modal-field">
                     <input type="checkbox" id="policy">
-                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+                    <label class="policy" for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
                 </fieldset>
-                <button type="submit">Отправить</button>
+                <button class="hero-btn" type="submit">Отправить</button>
             </form>
         </div>
     </div>
