@@ -897,10 +897,20 @@ button {
 }
 
 .policy {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
+}
+
+.check:checked + .icon-check {
+    background-image: url('../images/check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    border: 2px solid transparent;
 }
 
 .policy a {
@@ -910,4 +920,24 @@ button {
 .modal-form .hero-btn {
     margin-top: 30px;
 
+}
+
+.check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.icon-check {
+    display: inline-block;
+    margin-right: 8px;
+    height: 15px;
+    width: 16px;
+    border-radius: 2px;
+    border: 2px solid var(--main-color);
 }
