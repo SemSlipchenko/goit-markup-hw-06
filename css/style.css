@@ -795,7 +795,7 @@ button {
     transition: all var(--transition-data);
 }
 
-.modal-close:hover .icon-close {
+.modal-close:hover .icon-close, .modal-close:focus .icon-close {
     fill: var(--hover-color);
 }
 
@@ -836,6 +836,7 @@ button {
     resize: none;
     padding: 12px 16px;
     cursor: pointer;
+    outline: none;
 }
 
 .modal-field textarea::placeholder {
@@ -846,7 +847,7 @@ button {
 }
 
 .modal-field textarea:focus {
-    border: 1px solid red;
+    border: 1px solid var(--hover-color);
 }
 
 .modal-field + .modal-field {
@@ -874,15 +875,17 @@ button {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-}
-
-.modal-input:hover {
     cursor: pointer;
+    outline: none;
+}
+
+.modal-input:hover, .modal-input:focus {
     border: 1px solid var(--hover-color);
 }
 
-.modal-input:focus {
-    border: 1px solid var(--hover-color);
+.modal-input:hover + .icon-input,
+.modal-input:focus + .icon-input {
+    fill: var(--hover-color);
 }
 
 .icon-input {
@@ -894,6 +897,7 @@ button {
     height: 18px;
     z-index: 1;
     pointer-events: none;
+    transition: fill var(--transition-data);
 }
 
 .policy {
